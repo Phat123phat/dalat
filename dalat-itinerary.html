@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đà Lạt 3 Ngày 2 Đêm ✨</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c10;
+    --bg2: #0f1218;
+    --surface: rgba(255,255,255,0.04);
+    --surface2: rgba(255,255,255,0.07);
+    --border: rgba(255,255,255,0.08);
+    --border2: rgba(255,255,255,0.14);
+    --text: #f0ede8;
+    --text2: #9a9690;
+    --text3: #6b6760;
+    --d1: #7eb8c9;
+    --d1bg: rgba(126,184,201,0.1);
+    --d1glow: rgba(126,184,201,0.2);
+    --d2: #c9a87e;
+    --d2bg: rgba(201,168,126,0.1);
+    --d2glow: rgba(201,168,126,0.2);
+    --d3: #8ec98e;
+    --d3bg: rgba(142,201,142,0.1);
+    --d3glow: rgba(142,201,142,0.2);
+    --accent: #c9a87e;
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+  .light {
+    --bg: #f5f2ed;
+    --bg2: #ede9e2;
+    --surface: rgba(0,0,0,0.03);
+    --surface2: rgba(0,0,0,0.06);
+    --border: rgba(0,0,0,0.08);
+    --border2: rgba(0,0,0,0.14);
+    --text: #1a1815;
+    --text2: #6b6660;
+    --text3: #9a9590;
+    --d1: #3a8fab;
+    --d1bg: rgba(58,143,171,0.08);
+    --d1glow: rgba(58,143,171,0.15);
+    --d2: #a07030;
+    --d2bg: rgba(160,112,48,0.08);
+    --d2glow: rgba(160,112,48,0.15);
+    --d3: #3a8a3a;
+    --d3bg: rgba(58,138,58,0.08);
+    --d3glow: rgba(58,138,58,0.15);
+    --accent: #a07030;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background 0.4s, color 0.4s;
+  }
+
+  /* NOISE OVERLAY */
+  body::before {
+    content:'';
+    position:fixed; inset:0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events:none; z-index:0; opacity:0.4;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    overflow: hidden;
+  }
+  .hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.18;
+    pointer-events: none;
+  }
+  .orb1 { width:500px;height:500px;background:radial-gradient(circle,#7eb8c9,transparent);top:-100px;left:-100px; }
+  .orb2 { width:400px;height:400px;background:radial-gradient(circle,#c9a87e,transparent);bottom:-80px;right:-80px; }
+  .orb3 { width:300px;height:300px;background:radial-gradient(circle,#8ec98e,transparent);top:30%;left:50%;transform:translateX(-50%); }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-family: 'Space Mono', monospace;
+    color: var(--text2);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    position: relative; z-index: 1;
+  }
+  .hero-badge span { color: var(--accent); }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 10vw, 110px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    position: relative; z-index: 1;
+    margin-bottom: 12px;
+  }
+  .hero h1 .italic { font-style: italic; font-weight: 400; color: var(--accent); }
+  .hero-sub {
+    font-size: 15px;
+    color: var(--text2);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    position: relative; z-index: 1;
+    margin-bottom: 48px;
+  }
+
+  .hero-stats {
+    display: flex; gap: 40px;
+    position: relative; z-index: 1;
+    margin-bottom: 48px;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .stat-label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+
+  .hero-scroll {
+    position: absolute; bottom: 32px;
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    color: var(--text3); font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    font-family: 'Space Mono', monospace;
+    animation: bounce 2s ease-in-out infinite;
+    z-index: 1;
+  }
+  .hero-scroll svg { opacity: 0.5; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+
+  /* CONTROLS BAR */
+  .controls {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,12,16,0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px;
+    display: flex; align-items: center; gap: 12px;
+    flex-wrap: wrap;
+    transition: background 0.4s;
+  }
+  .light .controls { background: rgba(245,242,237,0.88); }
+
+  .controls-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 4px;
+  }
+  .filter-group { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+  .filter-btn {
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--border2);
+    background: var(--surface);
+    color: var(--text2);
+    font-size: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .filter-btn:hover { background: var(--surface2); color: var(--text); }
+  .filter-btn.active { color: var(--bg); border-color: transparent; }
+  .filter-btn[data-day="all"].active { background: var(--text); }
+  .filter-btn[data-day="1"].active { background: var(--d1); }
+  .filter-btn[data-day="2"].active { background: var(--d2); }
+  .filter-btn[data-day="3"].active { background: var(--d3); }
+  .filter-btn[data-type="food"].active { background: #e87a5a; }
+  .filter-btn[data-type="checkin"].active { background: #7a8ee8; }
+  .filter-btn[data-type="fun"].active { background: #8ee87a; }
+  .filter-btn[data-type="shop"].active { background: #e8c87a; }
+  .filter-btn[data-type="end"].active { background: var(--text2); }
+
+  .theme-btn {
+    margin-left: auto;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border2);
+    background: var(--surface);
+    color: var(--text2);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .theme-btn:hover { background: var(--surface2); color: var(--text); }
+
+  /* PROGRESS */
+  .progress-section {
+    max-width: 900px; margin: 40px auto 0;
+    padding: 0 24px;
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+  .progress-section.visible { opacity: 1; transform: none; }
+  .progress-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .progress-label { font-size: 13px; color: var(--text2); }
+  .progress-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 13px; color: var(--accent);
+  }
+  .progress-bar-wrap {
+    height: 4px;
+    background: var(--surface2);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--d1), var(--d2), var(--d3));
+    border-radius: 999px;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+    width: 0%;
+  }
+
+  /* MAIN CONTENT */
+  .main { max-width: 900px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  /* DAY SECTION */
+  .day-section {
+    margin-bottom: 64px;
+    opacity: 0; transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.4,0,0.2,1);
+  }
+  .day-section.visible { opacity: 1; transform: none; }
+
+  .day-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 32px;
+  }
+  .day-pill {
+    padding: 8px 20px;
+    border-radius: 999px;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .day-1 .day-pill { background: var(--d1bg); color: var(--d1); border: 1px solid var(--d1glow); }
+  .day-2 .day-pill { background: var(--d2bg); color: var(--d2); border: 1px solid var(--d2glow); }
+  .day-3 .day-pill { background: var(--d3bg); color: var(--d3); border: 1px solid var(--d3glow); }
+  .day-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+  }
+  .day-divider {
+    flex: 1; height: 1px;
+    background: var(--border);
+  }
+  .day-count {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--text3);
+    flex-shrink: 0;
+  }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 7px; top: 16px; bottom: 16px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--border2) 0%, transparent 100%);
+  }
+  .day-1 .timeline::before { background: linear-gradient(to bottom, var(--d1glow), transparent); }
+  .day-2 .timeline::before { background: linear-gradient(to bottom, var(--d2glow), transparent); }
+  .day-3 .timeline::before { background: linear-gradient(to bottom, var(--d3glow), transparent); }
+
+  /* ACTIVITY CARD */
+  .activity {
+    position: relative;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+  }
+  .activity.hidden { display: none; }
+  .activity-dot {
+    position: absolute;
+    left: -24px; top: 20px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--bg);
+    z-index: 1;
+    transition: transform 0.3s;
+  }
+  .day-1 .activity-dot { background: var(--d1); box-shadow: 0 0 12px var(--d1glow); }
+  .day-2 .activity-dot { background: var(--d2); box-shadow: 0 0 12px var(--d2glow); }
+  .day-3 .activity-dot { background: var(--d3); box-shadow: 0 0 12px var(--d3glow); }
+  .activity.done .activity-dot { background: var(--text3); box-shadow: none; }
+
+  .activity-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+    position: relative;
+    overflow: hidden;
+  }
+  .activity-card::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .day-1 .activity-card::before { background: var(--d1); }
+  .day-2 .activity-card::before { background: var(--d2); }
+  .day-3 .activity-card::before { background: var(--d3); }
+  .activity-card:hover { background: var(--surface2); border-color: var(--border2); transform: translateX(4px); }
+  .activity-card:hover::before { opacity: 1; }
+  .activity-card:hover .activity-dot { transform: scale(1.3); }
+  .activity.done .activity-card { opacity: 0.5; }
+  .activity.done .activity-card .activity-title { text-decoration: line-through; color: var(--text3); }
+
+  .activity-top { display: flex; align-items: flex-start; gap: 12px; }
+  .activity-time {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--text3);
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .activity-icon { font-size: 18px; flex-shrink: 0; }
+  .activity-info { flex: 1; min-width: 0; }
+  .activity-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+    transition: color 0.2s;
+  }
+  .activity-location {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 3px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .activity-location svg { flex-shrink: 0; opacity: 0.6; }
+
+  .activity-actions {
+    display: flex; align-items: center; gap: 8px;
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .map-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px;
+    border-radius: var(--radius-sm);
+    background: var(--surface2);
+    border: 1px solid var(--border2);
+    color: var(--text2);
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .map-btn:hover { color: var(--text); border-color: var(--accent); }
+  .map-btn svg { flex-shrink: 0; }
+
+  .done-btn {
+    margin-left: auto;
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 14px;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text3);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .done-btn:hover { border-color: var(--d3); color: var(--d3); }
+  .activity.done .done-btn { background: var(--d3bg); border-color: var(--d3); color: var(--d3); }
+
+  /* MAP EMBED */
+  .map-embed {
+    display: none;
+    margin-top: 12px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--border2);
+  }
+  .map-embed.open { display: block; }
+  .map-embed iframe { width:100%; height:220px; border:none; display:block; }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 24px;
+    color: var(--text3);
+    font-size: 12px;
+    font-family: 'Space Mono', monospace;
+    border-top: 1px solid var(--border);
+  }
+  footer span { color: var(--accent); }
+
+  /* SCROLL ANIMATIONS */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .hero { padding: 60px 20px 50px; }
+    .hero-stats { gap: 24px; }
+    .controls { padding: 10px 16px; gap: 8px; }
+    .main { padding: 32px 16px 60px; }
+    .timeline { padding-left: 22px; }
+    .timeline::before { left: 5px; }
+    .activity-dot { left: -19px; width: 12px; height: 12px; }
+    .activity-card { padding: 14px 16px; }
+    .day-header { flex-wrap: wrap; gap: 10px; }
+    .day-divider { display: none; }
+    .day-count { display: none; }
+    .map-embed iframe { height: 180px; }
+    .filter-group { gap: 4px; }
+    .filter-btn { padding: 5px 10px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-orb orb3"></div>
+
+  <div class="hero-badge">✦ <span>Lịch Trình</span> · Đà Lạt 2025</div>
+  <h1>Đà <span class="italic">Lạt</span></h1>
+  <p class="hero-sub">3 ngày · 2 đêm · Thành phố ngàn hoa</p>
+
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Ngày</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">14</div>
+      <div class="stat-label">Điểm đến</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Kỷ niệm</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1v10M3 7l5 5 5-5"/></svg>
+    Cuộn xuống
+  </div>
+</section>
+
+<!-- CONTROLS -->
+<div class="controls" id="controls">
+  <span class="controls-title">Lọc:</span>
+  <div class="filter-group">
+    <button class="filter-btn active" data-day="all">Tất cả</button>
+    <button class="filter-btn" data-day="1">Ngày 1</button>
+    <button class="filter-btn" data-day="2">Ngày 2</button>
+    <button class="filter-btn" data-day="3">Ngày 3</button>
+    <button class="filter-btn" data-type="food">🍜 Ăn uống</button>
+    <button class="filter-btn" data-type="checkin">📸 Check-in</button>
+    <button class="filter-btn" data-type="fun">🎉 Vui chơi</button>
+  </div>
+  <button class="theme-btn" id="themeBtn" title="Đổi theme">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+    </svg>
+  </button>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-section" id="progressSection">
+  <div class="progress-header">
+    <span class="progress-label">🗺️ Tiến độ hành trình</span>
+    <span class="progress-count" id="progressCount">0 / 14 địa điểm</span>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="main" id="main">
+
+  <!-- DAY 1 -->
+  <div class="day-section day-1" id="day-section-1">
+    <div class="day-header">
+      <div class="day-pill">Ngày 1</div>
+      <h2 class="day-title">Đến nơi, thả hồn</h2>
+      <div class="day-divider"></div>
+      <div class="day-count">4 hoạt động</div>
+    </div>
+    <div class="timeline">
+
+      <div class="activity" data-day="1" data-type="checkin">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">14:00</span>
+            <span class="activity-icon">🏨</span>
+            <div class="activity-info">
+              <div class="activity-title">Check-in khách sạn</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Nhận phòng, nghỉ ngơi
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="1" data-type="checkin">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">15:30</span>
+            <span class="activity-icon">☕</span>
+            <div class="activity-info">
+              <div class="activity-title">Check-in sống ảo</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Tiệm Cà Phê Túi Mơ To
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/YiVTNE3wa7NJMRuv5" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="1" data-type="food">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">18:30</span>
+            <span class="activity-icon">🍲</span>
+            <div class="activity-info">
+              <div class="activity-title">Ăn tối</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Lẩu gà lá é Cao Phụng
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/fBHpRxQ2VUmMukHB9" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="1" data-type="fun">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">20:30</span>
+            <span class="activity-icon">🌙</span>
+            <div class="activity-info">
+              <div class="activity-title">Dạo phố đêm</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Chợ Đêm Đà Lạt
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-section day-2" id="day-section-2">
+    <div class="day-header">
+      <div class="day-pill">Ngày 2</div>
+      <h2 class="day-title">Phiêu lưu & Khám phá</h2>
+      <div class="day-divider"></div>
+      <div class="day-count">5 hoạt động</div>
+    </div>
+    <div class="timeline">
+
+      <div class="activity" data-day="2" data-type="food">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">08:00</span>
+            <span class="activity-icon">🥖</span>
+            <div class="activity-info">
+              <div class="activity-title">Ăn sáng</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Bánh mì xíu mại 79
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/KgKvLyNUGWTA968LA" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="2" data-type="fun">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">09:30</span>
+            <span class="activity-icon">🏎️</span>
+            <div class="activity-info">
+              <div class="activity-title">Đua xe Kart</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Wonder Racing
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/BM55ZNx3xbDNkDAR7" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="2" data-type="food">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">12:30</span>
+            <span class="activity-icon">🍜</span>
+            <div class="activity-info">
+              <div class="activity-title">Ăn trưa</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Bánh bèo bà Hường
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/w2WA32fTufE8VAas6" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="2" data-type="checkin">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">15:00</span>
+            <span class="activity-icon">🌸</span>
+            <div class="activity-info">
+              <div class="activity-title">Tham quan</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Thung Lũng Tình Yêu
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="2" data-type="food">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">18:30</span>
+            <span class="activity-icon">🔥</span>
+            <div class="activity-info">
+              <div class="activity-title">Ăn tối</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Tiệm nướng Our Memory
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/QWcaY4zRrqYqgwv2A" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-section day-3" id="day-section-3">
+    <div class="day-header">
+      <div class="day-pill">Ngày 3</div>
+      <h2 class="day-title">Mua sắm & Lên đường</h2>
+      <div class="day-divider"></div>
+      <div class="day-count">4 hoạt động</div>
+    </div>
+    <div class="timeline">
+
+      <div class="activity" data-day="3" data-type="food">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">08:00</span>
+            <span class="activity-icon">🍜</span>
+            <div class="activity-info">
+              <div class="activity-title">Ăn sáng</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Bún bò
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/C4HBVYb295NikxK38" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="3" data-type="fun">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">10:00</span>
+            <span class="activity-icon">🛍️</span>
+            <div class="activity-info">
+              <div class="activity-title">Mua sắm quà</div>
+              <div class="activity-location" style="color:var(--text3)">
+                Đặc sản Đà Lạt, quà cho gia đình
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="3" data-type="food">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">12:00</span>
+            <span class="activity-icon">🍖</span>
+            <div class="activity-info">
+              <div class="activity-title">Ăn trưa</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Nem Nướng Hùng Vân
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <a class="map-btn" href="https://maps.app.goo.gl/A3qSVd3XKWVZtPyN6" target="_blank" onclick="event.stopPropagation()">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Google Maps
+            </a>
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity" data-day="3" data-type="end">
+        <div class="activity-dot"></div>
+        <div class="activity-card" onclick="toggleDone(this)">
+          <div class="activity-top">
+            <span class="activity-time">14:00</span>
+            <span class="activity-icon">👋</span>
+            <div class="activity-info">
+              <div class="activity-title">Kết thúc hành trình</div>
+              <div class="activity-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                Trả phòng · Về nhà
+              </div>
+            </div>
+          </div>
+          <div class="activity-actions">
+            <button class="done-btn" onclick="event.stopPropagation(); toggleDone(this.closest('.activity-card'))">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Đánh dấu xong
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Made with <span>♥</span> for Đà Lạt · 3 ngày 2 đêm · 2025
+</footer>
+
+<script>
+  // THEME TOGGLE
+  const themeBtn = document.getElementById('themeBtn');
+  let isLight = false;
+  themeBtn.addEventListener('click', () => {
+    isLight = !isLight;
+    document.body.classList.toggle('light', isLight);
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+  if (localStorage.getItem('theme') === 'light') {
+    isLight = true;
+    document.body.classList.add('light');
+  }
+
+  // FILTER
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  let activeDay = 'all', activeType = null;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const day = btn.dataset.day;
+      const type = btn.dataset.type;
+
+      if (day !== undefined) {
+        document.querySelectorAll('[data-day]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeDay = day;
+        activeType = null;
+        document.querySelectorAll('[data-type]').forEach(b => b.classList.remove('active'));
+      } else if (type !== undefined) {
+        if (btn.classList.contains('active')) {
+          btn.classList.remove('active');
+          activeType = null;
+        } else {
+          document.querySelectorAll('[data-type]').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeType = type;
+        }
+      }
+      applyFilters();
+    });
+  });
+
+  function applyFilters() {
+    document.querySelectorAll('.activity').forEach(el => {
+      const d = el.dataset.day;
+      const t = el.dataset.type;
+      const dayMatch = activeDay === 'all' || d == activeDay;
+      const typeMatch = !activeType || t === activeType;
+      el.classList.toggle('hidden', !(dayMatch && typeMatch));
+    });
+    // Show/hide day sections
+    [1,2,3].forEach(i => {
+      const sec = document.getElementById('day-section-' + i);
+      const visible = sec.querySelectorAll('.activity:not(.hidden)').length > 0;
+      sec.style.display = visible ? '' : 'none';
+    });
+  }
+
+  // DONE TOGGLE
+  const STORAGE_KEY = 'dalat_done';
+  let doneSet = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'));
+
+  function toggleDone(card) {
+    const activity = card.closest('.activity');
+    const idx = [...document.querySelectorAll('.activity')].indexOf(activity);
+    if (activity.classList.contains('done')) {
+      activity.classList.remove('done');
+      doneSet.delete(idx);
+    } else {
+      activity.classList.add('done');
+      doneSet.add(idx);
+    }
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...doneSet]));
+    updateProgress();
+  }
+
+  function updateProgress() {
+    const total = document.querySelectorAll('.activity').length;
+    const done = doneSet.size;
+    document.getElementById('progressCount').textContent = `${done} / ${total} địa điểm`;
+    document.getElementById('progressBar').style.width = `${(done/total)*100}%`;
+  }
+
+  // Restore done state
+  document.querySelectorAll('.activity').forEach((el, i) => {
+    if (doneSet.has(i)) el.classList.add('done');
+  });
+  updateProgress();
+
+  // SCROLL ANIMATIONS
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.day-section, .progress-section').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
